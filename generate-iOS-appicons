@@ -25,10 +25,10 @@ sips -Z 180 --out iPhoneApp-60x60@3x.png       "$MY_DIR/$1"
 
 #iPad
 sips -Z 29 --out iPadSettings-29x29.png        "$MY_DIR/$1"
-# sips -Z 58 --out iPadSettings-29x29@2x.png   "$MY_DIR/$1"
+sips -Z 58 --out iPadSettings-29x29@2x.png     "$MY_DIR/$1"
 
 sips -Z 40 --out iPadSpotlight-40x40.png       "$MY_DIR/$1"
-# sips -Z 80 --out iPadSpotlight-40x40@2x.png  "$MY_DIR/$1"
+sips -Z 80 --out iPadSpotlight-40x40@2x.png    "$MY_DIR/$1"
 
 sips -Z 76  --out iPadApp-76x76.png            "$MY_DIR/$1"
 sips -Z 152 --out iPadApp-76x76@2x.png         "$MY_DIR/$1"
