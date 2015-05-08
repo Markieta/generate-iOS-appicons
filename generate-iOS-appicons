@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+# Generates app icon set for universal iOS applications for Xcode
+# Author: Christopher Markieta
+
+# Credits: Marcus Westin (GitHub: marcuswestin)
+# https://gist.github.com/marcuswestin/6907510
+
+MY_DIR=$(dirname $0)
+
+if [ -z $1 ]; then
+    echo "Usage: $0 [image]"
+    exit 1
+fi
+
+# iPhone
+sips -Z 58 --out iPhoneSettings-29x29@2x.png   "$1"
+sips -Z 87 --out iPhoneSettings-29x29@3x.png   "$1"
+
+sips -Z 80  --out iPhoneSpotlight-40x40@2x.png "$1"
+sips -Z 120 --out iPhoneSpotlight-40x40@3x.png "$1"
+
+sips -Z 120 --out iPhoneApp-60x60@2x.png       "$1"
+sips -Z 180 --out iPhoneApp-60x60@3x.png       "$1"
+
+#iPad
+sips -Z 29 --out iPadSettings-29x29.png        "$1"
+# sips -Z 58 --out iPadSettings-29x29@2x.png   "$1"
+
+sips -Z 40 --out iPadSpotlight-40x40.png       "$1"
+# sips -Z 80 --out iPadSpotlight-40x40@2x.png  "$1"
+
+sips -Z 76  --out iPadApp-76x76.png            "$1"
+sips -Z 152 --out iPadApp-76x76@2x.png         "$1"
